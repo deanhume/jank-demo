@@ -2,7 +2,39 @@
 <html>
 <head>
 <title>this div scrolls slowly</title>
-<style>*{font-family:sans-serif}body{height:5000px}#controls{padding:10px;position:fixed;top:15px;left:15px;background-color:rgba(255,255,255,.75);border:1px solid #000;z-index:1}#controls>*{font-size:150%;vertical-align:middle}.mover{position:fixed;width:256px}.heavy-painting{background-image:-webkit-linear-gradient(45deg,rgba(0,0,0,.05) 25%,transparent 25%,transparent) , -webkit-linear-gradient(-45deg,rgba(0,0,0,.05) 25%,transparent 25%,transparent) , -webkit-linear-gradient(45deg,transparent 75%,rgba(0,0,0,.05) 75%) , -webkit-linear-gradient(-45deg,transparent 75%,rgba(0,0,0,.05) 75%);background-size:3px 3px;box-shadow:15px 15px 15px;-webkit-box-shadow:15px 15px 15px}</style>
+<style>
+* {
+    font-family: sans-serif
+}
+
+body {
+    height: 5000px
+}
+
+#controls {
+    padding: 10px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(255,255,255,.75);
+    border: 1px solid #000;
+    z-index: 1
+}
+
+#controls>* {
+    font-size: 150%;
+    vertical-align: middle
+}
+
+.mover {
+    position: fixed;
+    width: 256px
+}
+
+.heavy-painting {
+    background-size: 3px 3px;
+}
+</style>
 </head>
 <body>
 <div>
@@ -11,6 +43,7 @@
 <input id="heavy-paint" type="checkbox" checked="true"><label for="heavy-paint">Costly effects</label>
 </div>
 </div>
-<script src="./js/scroll-improved.js" type="text/javascript"></script>
+<script src="./js/scroll-improved.js" type="text/javascript">
+</script>
 </body>
 </html>
