@@ -5,21 +5,21 @@ function updatePositions() {
     for (var i = 0; i < items.length; i++) {
         var phase;
         phase = Math.sin((cachedScrollTop / 1250) + (i % 5));
-        var top = items[i].style.top;
-        var amount = items[i].basicLeft + 100 * phase;
+        var item = items[i];
+        var top = item.style.top;
+        var amount = item.basicLeft + 100 * phase;
 
         var movement = '';
         if (!top){
-            var rect = items[i].getBoundingClientRect();
-            movement = 'transform: translate(' + amount + 'px,' + rect.top + 'px);';
-            console.log('topSecond', movement);
+            var topValue = item.getAttribute('data-top-value');
+            movement = 'transform: translate(' + amount + 'px,' + topValue + ');';
         }
         else{
-            movement = 'transform: translate(' + amount + 'px,' + top + ');';
-            console.log('topFirst', movement);
+            movement = 'transform: translate(' + amount + 'px,' + top + ');';           
+            item.setAttribute('data-top-value', top);
         }
-
-        items[i].setAttribute("style", movement);
+        
+        item.setAttribute('style', movement);
     }
 }
 
